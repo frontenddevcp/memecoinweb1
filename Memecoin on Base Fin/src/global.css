@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Freckle+Face:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fresca:wght@400&display=swap");
+@import "react-slideshow-image/dist/styles.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.indicator {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  border: 1px #666 solid;
+  margin: 0;
+}
+
+.indicator.active {
+  color: #fff;
+  background: #666;
+}
+.snowflake {
+  width: var(--size);
+  height: var(--size);
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -5vh;
+  left: var(--left);
+  animation: snowfall var(--speed) linear infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translate3d(var(--left-ini), 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--left-end), 110vh, 0);
+  }
+}
+
+
+
+
+
+*,
+::before,
+::after {
+  border-width: 0;
+}
+body, html {
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 600px) {
+  
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/Avenir\ Black.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+.avenir-font {
+  font-family: 'Avenir', sans-serif;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translate(-100px, -100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.animate-moveText {
+  animation: moveText 2s ease-out forwards;
+}
+.react-slideshow-navigation-button {
+  margin-left: 500px;
+}
+
+
+.introbg{
+  background-image: url("/intro-new.png");
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+.team-ready-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+
+
+@keyframes pacman {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  25% {
+    transform: translateX(-100%) rotate(360deg);
+  }
+  50% {
+    transform: translateX(0) rotate(0);
+  }
+  75% {
+    transform: translateX(100%) rotate(360deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+.pacman-animation {
+  position: relative;
+  animation: pacman 10s ease-in-out infinite; 
+}
+
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.bg-custom-bg {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  
+}
+
+@media (max-width: 768px) {
+  .bg-custom-bg {
+    background-image: url("/bg-olympicmobile.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+   
+  }
+}
+/* Add this CSS to your stylesheet */
+
+.marker-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .location-marker-0 {
+    position: absolute;
+    left: 0;
+    transform: translateX(0);
+  }
+}
+.waves>use {
+  animation: move-forever 10s -10s linear infinite;
+}
+
+.waves>use:nth-child(2) {
+  animation-delay: -9s;
+  animation-duration: 12s;
+}
+
+.waves>use:nth-child(3) {
+  animation-delay: -9s;
+  animation-duration: 12s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+.example {
+  transform: rotate(180deg);
+}
+.bottomwave {
+
+
+  width: 100%;
+  height: 10vw;
+  max-height: 200px;
+  transform: rotate(180deg);
+  z-index: 999;
+}
+
+.custom-text-stroke {
+ 
+  color: #FFFFFF;
+  font-family: "Motley", Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  stroke: #000;
+}
+
+
+
+body {
+  font-family: 'Celias', sans-serif;
+}
+
+.font-custom {
+  font-family: 'Celias', sans-serif;
+}
+
+.custom-heading {
+  font-family: "Celias", sans-serif;
+  color: #ffffff;
+  font-size: 268.75%;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: left;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  font-weight: 700;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.wave-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url('/wave.svg') repeat-x;
+  animation: wave 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  width: 100%;
+  max-width: 175px;
+  height: auto;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 1000px) {
+  .header-text {
+    text-align: center;
+    margin-top: rem;
+    font-size: 1.75rem;
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header-text {
+   
+   
+    font-size: 1.75rem;
+  }
+}
+.custom-marquee .frame {
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+  border: 2px solid white;
+  margin-right: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.custom-marquee .middle-frame {
+  transform: scale(1.2);
+}
+
+.custom-marquee .frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.custom-marquee .middle-frame img {
+  border: 2px solid blue;
+}
+
+.marquee-container, .marquee-container1 {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee-container1 .animate-up-down {
+  display: inline-block;
+  position: relative;
+  animation: up-down 2s infinite alternate;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+.marquee-container {
+  width: calc(100% - 5px); /* Ensure the border stays within the screen */
+  overflow: hidden;
+  background-color: rgb(36, 36, 218); /* Tailwind's bg-blue-500 */
+  color: white;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  border: 6px solid black;
+  height: 75px;
+  margin: 0 auto; /* Center the marquee */
+  box-sizing: border-box; /* Include border in width calculation */
+}
+
+@media only screen and (max-width:992px) {
+  .marquee-container {
+    font-size: 2rem;
+    height: 55px;
+  }
+}
+
+@keyframes zoomIn1 {
+  0% {
+    transform: scale(1);
+    border-color: transparent;
+    border-radius: 50%;
+  }
+  50% {
+    transform: scale(1.2);
+    border-color: white;
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1);
+    border-color: white;
+    border-radius: 50%;
+  }
+}
+
+.nav-zoom:hover {
+  animation: zoomIn1 1s forwards;
+  border: 6px solid white;
+  border-radius: 50%;
+  
+}
+
+
+
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.animate-zoomIn {
+  animation: zoomIn 2s forwards;
+  opacity: 1 !important;
+}
+
+@keyframes welcomeAnimation {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    transform: scale(1.1) translateX(-10px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+
+.welcome-animate {
+  animation: welcomeAnimation 2s ease-in-out infinite;
+}
+
+
+
+.marquee-container1 {
+  width: calc(100% - 8px); /* Ensure the border stays within the screen */
+  overflow: hidden;
+  background: transparent;
+  color: white;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  height: 170px;
+  margin: 0 auto; /* Center the marquee */
+  box-sizing: border-box; /* Include border in width calculation */
+}
